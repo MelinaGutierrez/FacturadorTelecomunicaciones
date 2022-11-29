@@ -61,9 +61,10 @@ namespace EmpresaTelecomunicaciones
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+            endpoints.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}");
+            endpoints.MapAreaControllerRoute("Users","Users", "{controller=Users}/{action=Users}/{id?}");
                 endpoints.MapRazorPages();
             });
         }
